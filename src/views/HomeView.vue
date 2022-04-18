@@ -13,7 +13,19 @@ const user = reactive({
 
 <template>
   <el-container>
-    <el-header>Header</el-header>
+    <el-header>
+      <div class="logo">Quantum</div>
+      <div class="menu">
+        <el-dropdown split-button type="primary" @click="handleClick">
+          个人中心
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item>退出</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
+      </div>
+    </el-header>
     <el-container>
       <el-aside width="200px">Aside</el-aside>
       <el-main><RouterView /></el-main>
